@@ -1,3 +1,3 @@
-export const categories = ['Groceries', 'Utilities', 'Entertainment', 'Food', 'Shopping'];
+export const categories = ['Groceries', 'Utilities', 'Entertainment', 'Food', 'Shopping', 'Misc'];
 
 export default categories
