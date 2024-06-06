@@ -4,6 +4,7 @@ import { useState } from "react";
 import ExpenseList from "./expense-tracker/components/ExpenseList";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter"
 import ExpenseForm from "./expense-tracker/components/ExpenseForm"
+import { nanoid } from "nanoid";
 
 const App = () => {
 
@@ -33,8 +34,8 @@ const App = () => {
       <div className="container my-4">
 
         <h1 className="text-center">Expense App</h1>
-        {/* Expense Form here */}
-        <div className="m-4"><ExpenseForm/></div>
+        {/* Expense Form here and notice instead of using nanoid() which is in the ExpenseForm.tsx im going to add one to the current array and use that as the ID number */}
+        <div className="m-4"><ExpenseForm onHelpSubmit={expense => setDummyExpensesArray([...dummyExpensesArray, {...expense, id: dummyExpensesArray.length + 1}])} /></div>
         {/* Expense Table filter option */}
         <div className="m-3 ms-4"><ExpenseFilter onSelectedCategory={category => setSelectedCategory(category)}/></div>
         <h2 className="text-center">Expense Table</h2>
