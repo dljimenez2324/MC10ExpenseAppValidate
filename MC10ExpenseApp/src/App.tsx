@@ -30,17 +30,24 @@ const App = () => {
 
   return (
     <>
-      <div className="container my-4">
-
-        <h1 className="text-center">Expense App</h1>
-        {/* Expense Form here and notice instead of using nanoid() which is in the ExpenseForm.tsx im going to add one to the current array and use that as the ID number */}
-        {/* when editing or changing this array we first have to spread the array  and then because we cannot directly edit the array we need to spread the variable that we just made and edit that which will then set to the setArray that we have in our useState */}
-        <div className="m-4"><ExpenseForm onHelpSubmit={expense => setDummyExpensesArray([...dummyExpensesArray, {...expense, id: dummyExpensesArray.length + 1}])} /></div>
-        {/* Expense Table filter option */}
-        <div className="m-3 ms-4"><ExpenseFilter onSelectedCategory={category => setSelectedCategory(category)}/></div>
-        <h2 className="text-center">Expense Table</h2>
-        {/* table of data */}
-        <div className="m-4"><ExpenseList expenses={visibleExpense} onDelete={handleDelete}/></div>
+      <h1 className="text-center my-5">Expense App</h1>
+      <div className="container">
+        <div className="container my-4 mx-4 flexCont">
+          {/* Expense Form here and notice instead of using nanoid() which is in the ExpenseForm.tsx im going to add one to the current array and use that as the ID number */}
+          {/* when editing or changing this array we first have to spread the array  and then because we cannot directly edit the array we need to spread the variable that we just made and edit that which will then set to the setArray that we have in our useState */}
+          <div className="col-4">
+            <h2 className="text-center">New Expense</h2>
+            <div className="m-4 formStyle"><ExpenseForm onHelpSubmit={expense => setDummyExpensesArray([...dummyExpensesArray, {...expense, id: dummyExpensesArray.length + 1}])} /></div>
+            {/* Expense Table filter option */}
+            <h4 className="m-4">Selected Category</h4>
+            <div className="m-4 ms-4"><ExpenseFilter onSelectedCategory={category => setSelectedCategory(category)}/></div>
+          </div>
+          <div className="col-8">
+            <h2 className="text-center expenseMargin">Expense Table</h2>
+            {/* table of data */}
+            <div className="m-4"><ExpenseList expenses={visibleExpense} onDelete={handleDelete}/></div>
+          </div>
+        </div>
       </div>
     </>
   )

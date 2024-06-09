@@ -9,7 +9,7 @@ interface FilterProps {
 const ExpenseFilter = ({onSelectedCategory}:FilterProps) => {
   return (
     <>
-        <div className="col-3 mb-3">
+        <div className="col mb-3">
             <select className="form-select" onChange={(e) => onSelectedCategory(e.target.value)} >
                 <option value="">All Categories</option>
                 {categories.map(category => <option key={category} value={category}>{category}</option>)}

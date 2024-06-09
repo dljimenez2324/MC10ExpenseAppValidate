@@ -1,18 +1,42 @@
 body {
-  background-color: rgb(27, 34, 34);
+  background-color: rgb(48, 56, 56);
   color:whitesmoke;
 }
 
+.flexCont {
+  display: flex;
+  
+}
 
+.expenseMargin {
+  margin-bottom: 3.5rem;
+}
 
+.table {
+  /* border-radius: 10px; */
+  border-color: whitesmoke;
+}
 
+.formStyle {
+  /* background-color: #212529; */
+}
 
+.dataStyle {
+  /* bootstrap is trying to overtake the style of the table body hence the important rule used */
+  background-color: #656b70 !important;
+}
 
+.deleteButton {
+  background-color: black;
+}
 
+thead {
+  font-size: larger;
+}
 
-
-
-
+/* tfoot {
+  background-color: #656b70 !important;
+} */
 
 
 

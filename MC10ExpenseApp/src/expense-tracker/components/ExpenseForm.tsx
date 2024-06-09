@@ -70,23 +70,24 @@ const ExpenseForm = ({onHelpSubmit}:ExpenseProps) => {
 
   return (
     <>
+        
         <form onSubmit={handleSubmit(onHelpSubmit)}>
             
             {/* hidden input so that form still takes in a value for the form to pass submission requirements */}
             <input type="hidden" {...register('id')} value={id}/>
-            <div className="col-3 mb-3">
+            <div className="col mb-3">
                 <label htmlFor="description" className="form-label">Description</label>
                 <input {...register('description')} id="description" type="text" placeholder="" className="form-control" />
                 {errors.description && <p className="text-danger">{errors.description.message}</p>}
             </div>
 
-            <div className="col-3 mb-3">
+            <div className="col mb-3">
                 <label htmlFor="amount" className="form-label">Amount</label>
                 <input {...register('amount', {valueAsNumber: true})} id="amount" type="number" placeholder="0" className="form-control" />
                 {errors.amount && <p className="text-danger">{errors.amount.message}</p>}
             </div>
 
-            <div className="col-3 mb-3">
+            <div className="col mb-3">
                 <label htmlFor="category" className="form-label">Category</label>
                 <select {...register('category')} id="category" name="category" className="form-select">
                     <option>Select a Category</option>
@@ -98,7 +99,7 @@ const ExpenseForm = ({onHelpSubmit}:ExpenseProps) => {
             </div>
 
             {/* <button className="btn btn-outline-primary mt-1" onClick={incrementID}>Submit</button> */}
-            <button className="btn btn-outline-primary mt-1" type="submit">Submit</button>
+            <button className="btn btn-outline-info mt-1" type="submit">Submit</button>
         </form>
     </>
   );

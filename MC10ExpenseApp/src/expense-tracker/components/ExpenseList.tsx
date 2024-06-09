@@ -34,22 +34,22 @@ const ExpenseList = ({expenses, onDelete}:ExpenseProps) => {
             </thead>
             {/* gives the body based upon the mapping of the expense array based upon the arrays keys*/}
             {/* notice that the expense mapping is creating a table row based upon the ID key  then in each table row created this way  the description, amount and category is created as a table data with a delete button in the last data column with the buttons onClick using a callback function that voids out the expense array at the id passed in */}
-            <tbody>
+            <tbody className="dataStyle">
                 {expenses.map(expense => <tr key={expense.id}>
-                    <td>{expense.description}</td>
-                    <td>$ {expense.amount}</td>
-                    <td>{expense.category}</td>
-                    <td>
-                        <button className="btn btn-outline-danger" onClick={() => onDelete(expense.id)}>Delete</button>
+                    <td className="dataStyle">{expense.description}</td>
+                    <td className="dataStyle">$ {expense.amount}</td>
+                    <td className="dataStyle">{expense.category}</td>
+                    <td className="dataStyle text-center">
+                        <button className="btn btn-outline-danger deleteButton" onClick={() => onDelete(expense.id)}>Delete</button>
                     </td>
 
                 </tr>)}
                 
             </tbody>
             {/* the footer contains a totaling of the expenses that are currently shown.  This uses the reduce method which ...  and is also fixed to 2 decimal places */}
-            <tfoot>
+            <tfoot className="footerStyle">
                 <tr>
-                    <td>Total</td>
+                    <td>Total Expenses</td>
                     <td>$ {expenses.reduce((acc,expense)=> expense.amount + acc,0).toFixed(2)}</td>
                     <td></td>
                     <td></td>
