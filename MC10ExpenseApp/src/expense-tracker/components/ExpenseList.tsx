@@ -37,7 +37,7 @@ const ExpenseList = ({expenses, onDelete}:ExpenseProps) => {
             <tbody className="dataStyle">
                 {expenses.map(expense => <tr key={expense.id}>
                     <td className="dataStyle">{expense.description}</td>
-                    <td className="dataStyle">$ {expense.amount}</td>
+                    <td className="dataStyle">$ {expense.amount.toFixed(2)}</td>
                     <td className="dataStyle">{expense.category}</td>
                     <td className="dataStyle text-center">
                         <button className="btn btn-outline-danger deleteButton" onClick={() => onDelete(expense.id)}>Delete</button>

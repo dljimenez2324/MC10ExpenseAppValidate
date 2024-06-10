@@ -99,7 +99,7 @@ const ExpenseForm = ({onHelpSubmit}:ExpenseProps) => {
             </div>
 
             {/* <button className="btn btn-outline-primary mt-1" onClick={incrementID}>Submit</button> */}
-            <button className="btn btn-outline-info mt-1" type="submit">Submit</button>
+            <button className="btn btn-outline-warning mt-1" type="submit">Submit</button>
         </form>
     </>
   );
