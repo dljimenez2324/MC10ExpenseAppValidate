@@ -21,5 +21,5 @@
 <strong>Notes:<strong/><br>
 *   
 
-<b>Peer Reviewed by: </b> name here <br>
-<b>Comments: </b>  comment here
+<b>Peer Reviewed by: </b> Aaron Perez <br>
+<b>Comments: </b>  Page has a clean design and zod validation requirements work correctly by not allowing blank fields and not allowing no picked category. Iwould add a reset to the input fields after submit/ add button is clicked . Great work!!!!!!
