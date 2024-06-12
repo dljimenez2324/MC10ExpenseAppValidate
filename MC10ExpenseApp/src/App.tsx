@@ -45,10 +45,12 @@ const App = () => {
                 <div className="m-4 ms-4"><ExpenseFilter onSelectedCategory={category => setSelectedCategory(category)}/></div>
               
             </div>
-            <div className="col-8">
-              <h2 className="text-center expenseMargin">Expense Table</h2>
-              {/* table of data */}
-              <div className="m-5"><ExpenseList expenses={visibleExpense} onDelete={handleDelete}/></div>
+            <div className="container">
+              <div className="col">
+                <h2 className="text-center expenseMargin">Expense Table</h2>
+                {/* table of data */}
+                <div className="m-5"><ExpenseList expenses={visibleExpense} onDelete={handleDelete}/></div>
+              </div>
             </div>
           </div>
         </div>

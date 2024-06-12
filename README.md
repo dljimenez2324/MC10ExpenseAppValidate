@@ -3,7 +3,7 @@
 
 <b>Name: </b> David Jimenez<br>
 <b>Project: </b>Mini Challenge 10 Expense App Validation w/zod react hook forms<br>
-<b>Date: </b> 06/06/2024 <br>
+<b>Date: </b> 06/11/2024 <br>
 <strong>Description: </strong> & <b>Requirements: </b><br>
 
 1. Add Validation to your form with react hook forms and zod
